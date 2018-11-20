@@ -3,3 +3,5 @@
 target/classes/fonts/
 target/classes/imgs/
 target/classes/mdlaf/
+/target/
+/bin/
