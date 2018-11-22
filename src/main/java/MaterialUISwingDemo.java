@@ -58,8 +58,8 @@ public class MaterialUISwingDemo {
 		// configuring the JMenuBar as well as its menus and items
 		// 메뉴 부분
 		JMenuBar bar = new JMenuBar ();
-		JMenu menu1 = new JMenu ("Option 1 (Animated)");
-		JMenu menu2 = new JMenu ("Option 2 (Not animated)");
+		JMenu menu1 = new JMenu ("Menu1");
+		JMenu menu2 = new JMenu ("Menu2");
 
 		JMenuItem item1 = new JMenuItem("I don't know");
 		JMenuItem item2 = new JMenuItem("I don't know");
