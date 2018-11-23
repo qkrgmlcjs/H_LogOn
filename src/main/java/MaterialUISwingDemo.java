@@ -67,27 +67,19 @@ public class MaterialUISwingDemo {
 		menubtn.setMaximumSize (new Dimension (200, 200));
 		
 		JButton bev_btn = new JButton("Beverage");
-		menubtn.setBackground (MaterialColors.LIGHT_BLUE_400);
-		menubtn.setForeground (Color.WHITE);
-		menubtn.setMaximumSize (new Dimension (100, 100));
+		bev_btn.setBackground (MaterialColors.LIGHT_BLUE_400);
+		bev_btn.setForeground (Color.WHITE);
+		bev_btn.setMaximumSize (new Dimension (100, 100));
 		
 		JPanel content = new JPanel ();
 		content.add (button);
 		content.add (menubtn);
+		content.add(bev_btn);
 
 		// add everything to the frame
 		frame.add (bar, BorderLayout.PAGE_START);
-		// frame.add (content, BorderLayout.CENTER);
-		menubtn.setAction(new AbstractAction() {
-			public void actionPerformed (ActionEvent e) {
-				JDialog orderdialog = new JDialog();
-				JPanel orderpanel = new JPanel ();
-				
-				orderdialog.setContentPane(orderpanel);
-				orderpanel.add(bev_btn);
-				
-			}
-		});
+		frame.add (content, BorderLayout.CENTER);
+		
 		// start animating!
 		// here, 'gray' is the color that the JComponent will transition to when the user hovers over it
 		MaterialUIMovement.add (menu1, MaterialColors.GRAY_200);
