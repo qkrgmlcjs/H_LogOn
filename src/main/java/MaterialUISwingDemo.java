@@ -1,44 +1,28 @@
-import mdlaf.MaterialLookAndFeel;
-import mdlaf.animation.MaterialUIMovement;
-import mdlaf.utils.MaterialColors;
-
-import javax.swing.AbstractAction;
-import javax.swing.Action;
-import javax.swing.JButton;
-import javax.swing.JCheckBox;
-import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JColorChooser;
-import javax.swing.JComboBox;
-import javax.swing.JDialog;
-import javax.swing.JEditorPane;
-import javax.swing.JFileChooser;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JProgressBar;
-import javax.swing.JRadioButton;
-import javax.swing.JRadioButtonMenuItem;
-import javax.swing.JScrollPane;
-import javax.swing.JSlider;
-import javax.swing.JSpinner;
-import javax.swing.JTabbedPane;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.JTextPane;
-import javax.swing.JToggleButton;
-import javax.swing.JToolBar;
-import javax.swing.JTree;
-import javax.swing.SpinnerListModel;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
+
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import javax.swing.JButton;
+import javax.swing.JColorChooser;
+import javax.swing.JDialog;
+import javax.swing.JEditorPane;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTabbedPane;
+import javax.swing.JToolBar;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+
+import mdlaf.MaterialLookAndFeel;
+import mdlaf.animation.MaterialUIMovement;
+import mdlaf.utils.MaterialColors;
 
 public class MaterialUISwingDemo {
 
@@ -81,7 +65,12 @@ public class MaterialUISwingDemo {
 		menubtn.setBackground (MaterialColors.LIGHT_BLUE_400);
 		menubtn.setForeground (Color.WHITE);
 		menubtn.setMaximumSize (new Dimension (200, 200));
-
+		
+		JButton bev_btn = new JButton("Beverage");
+		menubtn.setBackground (MaterialColors.LIGHT_BLUE_400);
+		menubtn.setForeground (Color.WHITE);
+		menubtn.setMaximumSize (new Dimension (100, 100));
+		
 		JPanel content = new JPanel ();
 		content.add (button);
 		content.add (menubtn);
@@ -89,7 +78,16 @@ public class MaterialUISwingDemo {
 		// add everything to the frame
 		frame.add (bar, BorderLayout.PAGE_START);
 		// frame.add (content, BorderLayout.CENTER);
-
+		menubtn.setAction(new AbstractAction() {
+			public void actionPerformed (ActionEvent e) {
+				JDialog orderdialog = new JDialog();
+				JPanel orderpanel = new JPanel ();
+				
+				orderdialog.setContentPane(orderpanel);
+				orderpanel.add(bev_btn);
+				
+			}
+		});
 		// start animating!
 		// here, 'gray' is the color that the JComponent will transition to when the user hovers over it
 		MaterialUIMovement.add (menu1, MaterialColors.GRAY_200);
@@ -101,11 +99,15 @@ public class MaterialUISwingDemo {
 		// the animation will take 5 * 1000 / 30 = 166.666... milliseconds to complete
 		MaterialUIMovement.add (button, MaterialColors.LIGHT_BLUE_600, 5, 1000 / 30);
 		MaterialUIMovement.add (menubtn, MaterialColors.LIGHT_BLUE_600, 5, 1000 / 30);
+		MaterialUIMovement.add (bev_btn, MaterialColors.LIGHT_BLUE_600, 5, 1000 / 30);
 	
 		//일단은 놔둬보자 
 		JToolBar tb = new JToolBar ("toolbar");
 		JButton button1 = new JButton ("f");
 
+		
+		
+		
 		//툴바 버튼 액션이벤트리스너 
 		button1.setAction (new AbstractAction () {
 			@Override
