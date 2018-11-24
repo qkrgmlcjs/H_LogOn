@@ -44,7 +44,13 @@ public class MaterialUISwingDemo extends JFrame{
 		coke.setBorderPainted(true);
 		
 		
+		BeverageMatarial BM = new BeverageMatarial();
+	
+		
 		JPanel content = new JPanel ();
+		for(int i = 0 ; i<BM.beverage.length;i++) {
+			content.add(BM.beverage[i]);
+		}
 		
 		
 		
@@ -89,7 +95,7 @@ public class MaterialUISwingDemo extends JFrame{
 		frame.pack ();
 		frame.setVisible (true);
 
-		new CheckBoxBeverage();
+		
 	}
 
 }
