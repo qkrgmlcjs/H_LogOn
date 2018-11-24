@@ -13,7 +13,6 @@ import javax.swing.JLabel;
 import mdlaf.utils.MaterialColors;
 
 public class BeverageMatarial extends JFrame{
-	private JLabel sumLabel;
 	private JCheckBox [] beverage = new JCheckBox [6];
 	private String [] beveragenames = {"물", "코카콜라", "스프라이트", "오렌지쥬스", "웰치스", "환타파인"};
 	private ImageIcon [] beverageicon = {new ImageIcon("imgs/물.jpg"), 

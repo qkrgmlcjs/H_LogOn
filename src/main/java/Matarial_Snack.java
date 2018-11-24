@@ -10,7 +10,9 @@ import mdlaf.utils.MaterialColors;
 public class Matarial_Snack {
 	public JCheckBox [] Snack_Check = new JCheckBox [6];
 	private String [] Snack_names = {"꼬깔콘", "바나나킥", "새우깡", "콘칩", "프링글스", "칩포테토"};
-	private String [] Snack_icon = {"imgs/꼬칼콘.jpg", "imgs/바나나킥.jpg", "imgs/새우깡.jpg", "imgs/콘칩.jpg", "imgs/프링글스.jpg", "imgs/칩포테토.jpg"};
+	private ImageIcon [] Snack_icon = {new ImageIcon("imgs/꼬칼콘.jpg"), new ImageIcon("imgs/바나나킥.jpg"), 
+			new ImageIcon("imgs/새우깡.jpg"), new ImageIcon("imgs/콘칩.jpg"), new ImageIcon("imgs/프링글스.jpg"), 
+			new ImageIcon("imgs/칩포테토.jpg")};
 
 	
 	

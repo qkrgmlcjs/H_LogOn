@@ -1,11 +1,10 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.ImageIcon;
 import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -18,50 +17,34 @@ import mdlaf.MaterialLookAndFeel;
 import mdlaf.animation.MaterialUIMovement;
 import mdlaf.utils.MaterialColors;
 
-public class MaterialUISwingDemo {
-
-	public static void main (String[] args) {
+public class MaterialUISwingDemo extends JFrame{
+	public static void main(String[] args) {
 		try {
 			UIManager.setLookAndFeel (new MaterialLookAndFeel ());
 		}
 		catch (UnsupportedLookAndFeelException e) {
 			e.printStackTrace ();
 		}
-
+	
 		// basic instantiation of JFrame with various components, including a
 		// JMenuBar with some menus and items, as well as a button
 		JFrame frame = new JFrame ("Material Design UI for Swing by atharva washimkar");
 		frame.setMinimumSize (new Dimension (600, 400));
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+		frame.setTitle("상품주문");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
 		// configuring a simple JButton
-		JButton button = new JButton ("COKE");
-		button.setBackground (MaterialColors.LIGHT_BLUE_400);
-		button.setForeground (Color.WHITE);
-		button.setMaximumSize (new Dimension (200, 200));
+		ImageIcon cokeIcon = new ImageIcon("imgs/코카콜라.jpg");
+		JCheckBox coke = new JCheckBox ("COKE", cokeIcon);
+		coke.setBackground (MaterialColors.LIGHT_BLUE_400);
+		coke.setForeground (Color.WHITE);
+		coke.setMaximumSize (new Dimension (200, 200));
+		coke.setBorderPainted(true);
 		
-		JButton menubtn = new JButton ("Sprite");
-		menubtn.setBackground (MaterialColors.LIGHT_BLUE_400);
-		menubtn.setForeground (Color.WHITE);
-		menubtn.setMaximumSize (new Dimension (200, 200));
-		
-		JButton bev_btn = new JButton("Fanta");
-		bev_btn.setBackground (MaterialColors.LIGHT_BLUE_400);
-		bev_btn.setForeground (Color.WHITE);
-		bev_btn.setMaximumSize (new Dimension (100, 100));
 		
 		JPanel content = new JPanel ();
-		content.add (button);
-		content.add (menubtn);
-		content.add(bev_btn);
-		
-		//음료메뉴 CheckBox
-		JCheckBox[] bev_check = new JCheckBox[6];
-		String[]  names = {"Coca Cola","Sprite","Orange Juice","Fanta","Wellchis","Water"};
-		
-		//과자메뉴 CheckBox
-		JCheckBox[] snack_check = new JCheckBox[6];
-		//String[] names = {}
 		
 		
 		
@@ -80,9 +63,9 @@ public class MaterialUISwingDemo {
 		// there will be 5 intermediate colors displayed in the transition from the original components color to the new one specified
 		// the "frame rate" of the transition will be 1000 / 30, or 30 FPS
 		// the animation will take 5 * 1000 / 30 = 166.666... milliseconds to complete
-		MaterialUIMovement.add (button, MaterialColors.LIGHT_BLUE_600, 5, 1000 / 30);
-		MaterialUIMovement.add (menubtn, MaterialColors.LIGHT_BLUE_600, 5, 1000 / 30);
-		MaterialUIMovement.add (bev_btn, MaterialColors.LIGHT_BLUE_600, 5, 1000 / 30);
+		//MaterialUIMovement.add (button, MaterialColors.LIGHT_BLUE_600, 5, 1000 / 30);
+		//MaterialUIMovement.add (menubtn, MaterialColors.LIGHT_BLUE_600, 5, 1000 / 30);
+		//MaterialUIMovement.add (bev_btn, MaterialColors.LIGHT_BLUE_600, 5, 1000 / 30);
 	
 		//일단은 놔둬보자 
 
@@ -106,6 +89,7 @@ public class MaterialUISwingDemo {
 		frame.pack ();
 		frame.setVisible (true);
 
+		new CheckBoxBeverage();
 	}
-}
 
+}

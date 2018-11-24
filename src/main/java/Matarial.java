@@ -1,8 +1,9 @@
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -21,7 +22,7 @@ public class Matarial extends JFrame{
 		setTitle("상품주문");
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		//MyItemListener listener = new MyItemLister();
+		MyItemListener listener = new MyItemLister();
 		for(int i=0; i<beverage.length; i++) {
 			beverage[i] = new JCheckBox(beveragenames[i]);
 			beverage[i].setBackground (MaterialColors.LIGHT_BLUE_400);
@@ -40,6 +41,16 @@ public class Matarial extends JFrame{
 		setSize(250,200);
 		setVisible(true);
 	}
-		
-	}
+	class MyItemListener implements ItemListener{
+		private int sum=0;
+		public void itemStateChange(ItemEvent e) {
+			if(e.getStateChage()==ItemEvent.SELECTED) {
+				if(e.getItem()==beverage[0])
+					sum+=
+			}
+		}
 
+	}
+		
+
+}
