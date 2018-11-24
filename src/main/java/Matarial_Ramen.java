@@ -12,6 +12,7 @@ public class Matarial_Ramen {
 	private String [] Ramen_icon = {"imgs/ºÒ´ßººÀ½¸é.jpg", "imgs/»ï¾ç¶ó¸é.jpg", "imgs/½Å¶ó¸é.jpg", "imgs/¿Õ¶Ñ²±.jpg", "imgs/Áø¶ó¸é.jpg", "imgs/Â¥ÆÄ°ÔÆ¼.jpg"};
 
 	public void Mataial_Ramen(){
+		MyItemListener listener = new MyItemListener();
 		for(int i=0; i<Ramen_Check.length; i++) {
 			Ramen_Check[i] = new JCheckBox(Ramen_names[i]);
 			Ramen_Check[i].setBackground (MaterialColors.LIGHT_BLUE_400);
