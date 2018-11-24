@@ -1,0 +1,30 @@
+import java.awt.Color;
+import java.awt.Dimension;
+
+import javax.swing.ImageIcon;
+import javax.swing.JCheckBox;
+
+import mdlaf.utils.MaterialColors;
+
+public class Matarial_Ramen {
+	public JCheckBox [] Ramen_Check = new JCheckBox [6];
+	private String [] Ramen_names = {"ºÒ´ßººÀ½¸é", "»ï¾ç¶ó¸é", "½Å¶ó¸é", "¿Õ¶Ñ²±", "Áø¶ó¸é", "Â¥ÆÄ°ÔÆ¼"};
+	private String [] Ramen_icon = {"imgs/ºÒ´ßººÀ½¸é.jpg", "imgs/»ï¾ç¶ó¸é.jpg", "imgs/½Å¶ó¸é.jpg", "imgs/¿Õ¶Ñ²±.jpg", "imgs/Áø¶ó¸é.jpg", "imgs/Â¥ÆÄ°ÔÆ¼.jpg"};
+
+	public void Mataial_Ramen(){
+		for(int i=0; i<Ramen_Check.length; i++) {
+			Ramen_Check[i] = new JCheckBox(Ramen_names[i]);
+			Ramen_Check[i].setBackground (MaterialColors.LIGHT_BLUE_400);
+			Ramen_Check[i].setForeground (Color.WHITE);
+			Ramen_Check[i].setMaximumSize (new Dimension (200, 200));
+			Ramen_Check[i].setBorderPainted(true);
+			//frame.add(beverage[i]);
+			Ramen_Check[i].addItemListener(listener);
+		}
+		for(int i=0; i<Ramen_Check.length; i++) {
+			ImageIcon selectedicon = new ImageIcon(Ramen_icon[i]);
+			Ramen_Check[i].setSelectedIcon(selectedicon);
+		}
+	
+	}
+}
