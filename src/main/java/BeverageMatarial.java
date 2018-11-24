@@ -9,14 +9,16 @@ import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import Matarial.MyItemListener;
+//import BeverageMatarial.MyItemListener;
 import mdlaf.utils.MaterialColors;
 
 public class BeverageMatarial extends JFrame{
 	private JLabel sumLabel;
 	private JCheckBox [] beverage = new JCheckBox [6];
 	private String [] beveragenames = {"물", "코카콜라", "스프라이트", "오렌지쥬스", "웰치스", "환타파인"};
-	private String [] beverageicon = {"imgs/물.jpg", "imgs/코카콜라.jpg", "imgs/스프라이트.jpg", "imgs/오렌지쥬스.jpg", "imgs/웰치스.jpg", "imgs/환타파인.jpg"};
+	private ImageIcon [] beverageicon = {new ImageIcon("imgs/물.jpg"), 
+			new ImageIcon("imgs/코카콜라.jpg"), new ImageIcon("imgs/스프라이트.jpg"), new ImageIcon("imgs/오렌지쥬스.jpg"), 
+			new ImageIcon("imgs/웰치스.jpg"), new ImageIcon("imgs/환타파인.jpg")};
 	
 	public void CheckBoxBeverage(){
 		MyItemListener listener = new MyItemListener();
@@ -29,15 +31,15 @@ public class BeverageMatarial extends JFrame{
 			beverage[i].addItemListener(listener);
 		}
 		for(int i=0; i<beverage.length; i++) {
-			ImageIcon selectedicon = new ImageIcon(beverageicon[i]);
+			ImageIcon selectedicon = new ImageIcon();
 			beverage[i].setSelectedIcon(selectedicon);
 		}
 	}
 }
 class MyItemListener implements ItemListener{
-	private int sum=0;
-	private Object[] beveragenames;
-	private AbstractButton sumLabel;
+	public int sum=0;
+	public Object[] beveragenames;
+	public AbstractButton sumLabel;
 	public void itemStateChange(ItemEvent e) {
 		if(e.getStateChange()==ItemEvent.SELECTED) {
 			if(e.getItem()==beveragenames[0])
@@ -74,4 +76,5 @@ class MyItemListener implements ItemListener{
 		// TODO Auto-generated method stub
 		
 	}
+	
 }
