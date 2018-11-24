@@ -18,7 +18,7 @@ public class Matarial_Snack {
 	
 	public void Matarial_snack() {
 		
-		MyItemListener listener = new MyItemLister();
+		MyItemListener listener = new MyItemListener();
 		for(int i=0; i<Snack_Check.length; i++) {
 			Snack_Check[i] = new JCheckBox(Snack_names[i]);
 			Snack_Check[i].setBackground (MaterialColors.LIGHT_BLUE_400);

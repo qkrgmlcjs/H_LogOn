@@ -20,6 +20,7 @@ public class Matarial extends JFrame{
 		JFrame frame = new JFrame ("Material Design UI for Swing by atharva washimkar");
 		frame.setMinimumSize (new Dimension (600, 400));
 		setTitle("상품주문");
+		MyItemListener listener = new MyItemListener();
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		MyItemListener listener = new MyItemLister();
