@@ -1,6 +1,8 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
@@ -57,6 +59,10 @@ public class MaterialUISwingDemo {
 		JCheckBox[] bev_check = new JCheckBox[6];
 		String[]  names = {"Coca Cola","Sprite","Orange Juice","Fanta","Wellchis","Water"};
 		
+		//과자메뉴 CheckBox
+		JCheckBox[] snack_check = new JCheckBox[6];
+		//String[] names = {}
+		
 		
 		
 		
@@ -102,3 +108,4 @@ public class MaterialUISwingDemo {
 
 	}
 }
+

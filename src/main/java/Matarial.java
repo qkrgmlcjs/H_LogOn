@@ -21,7 +21,7 @@ public class Matarial extends JFrame{
 		setTitle("상품주문");
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		MyItemListener listener = new MyItemLister();
+		//MyItemListener listener = new MyItemLister();
 		for(int i=0; i<beverage.length; i++) {
 			beverage[i] = new JCheckBox(beveragenames[i]);
 			beverage[i].setBackground (MaterialColors.LIGHT_BLUE_400);
@@ -41,6 +41,5 @@ public class Matarial extends JFrame{
 		setVisible(true);
 	}
 		
-		
 	}
-}
+
