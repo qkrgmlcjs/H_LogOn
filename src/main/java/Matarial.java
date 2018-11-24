@@ -1,21 +1,12 @@
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
-import javax.swing.ImageIcon;
-import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTabbedPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 
-import mdlaf.MaterialLookAndFeel;
-import mdlaf.animation.MaterialUIMovement;
 import mdlaf.utils.MaterialColors;
 
 public class Matarial extends JFrame{
@@ -26,6 +17,12 @@ public class Matarial extends JFrame{
 	public void CheckBoxBeverage() {
 		setTitle("상품주문");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		MyItemListener listener = new MyItemLister();
+		for(int i=0; i<beverage.length; i++) {
+			beverage[i] = new JCheckBox(names[i]);
+			beverage[i]
+		}
 		
 		// configuring a simple JButton
 				ImageIcon cokeIcon = new ImageIcon("imgs/코카콜라.jpg");
