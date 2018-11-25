@@ -17,7 +17,7 @@ public class BeverageMatarial extends JFrame{
 	public JCheckBox [] beverage = new JCheckBox [6];
 	public String [] beveragenames = {"Water", "Coke", "Sprite", "OrangeJuice", "Welchis", "Fanta_pine"};
 	public ImageIcon [] beverageicon = {new ImageIcon("c:\\Temp\\꼬깔콘.jpg"), 
-			new ImageIcon("c:\\Temp\\코카콜라.jpg"), new ImageIcon("c:\\Temp\\스프라이트.jpg"), new ImageIcon("c:\\Temp\\오렌지쥬스.jpg"), 
+			new ImageIcon("c:\\Temp\\불닭 수정.jpg"), new ImageIcon("c:\\Temp\\스프라이트.jpg"), new ImageIcon("c:\\Temp\\오렌지쥬스.jpg"), 
 			new ImageIcon("c:\\Temp\\웰치스.jpg"), new ImageIcon("c:\\Temp\\환타파인.jpg")};
 	
 	
