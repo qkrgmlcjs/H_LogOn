@@ -34,23 +34,10 @@ public class MaterialUISwingDemo extends JFrame{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
-		// configuring a simple JButton
-		ImageIcon cokeIcon = new ImageIcon("imgs/코카콜라.jpg");
-		JCheckBox coke = new JCheckBox ("COKE", cokeIcon);
-		coke.setBackground (MaterialColors.LIGHT_BLUE_400);
-		coke.setForeground (Color.WHITE);
-		coke.setMaximumSize (new Dimension (200, 200));
-		coke.setBorderPainted(true);
-		
-		
-		BeverageMatarial BM = new BeverageMatarial();
-	
+		new BeverageMatarial();
 		
 		JPanel content = new JPanel ();
 		content.setLayout(new GridLayout(3,2));
-		for(int i = 0 ; i<BM.beverage.length;i++) {
-			content.add(BM.beverage[i]);
-		}
 		
 		
 		
@@ -75,8 +62,7 @@ public class MaterialUISwingDemo extends JFrame{
 	
 		//일단은 놔둬보자 
 
-		JScrollPane sp = new JScrollPane (content);
-		sp.setHorizontalScrollBarPolicy (JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+		JScrollPane sp = new JScrollPane (new BeverageMatarial());
 		sp.setVerticalScrollBarPolicy (JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
 		JPanel pn = new JPanel ();
