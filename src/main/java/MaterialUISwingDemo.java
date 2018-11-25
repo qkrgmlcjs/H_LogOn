@@ -34,11 +34,37 @@ public class MaterialUISwingDemo extends JFrame{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
+<<<<<<< HEAD
 		new BeverageMatarial();
 		
 		JPanel content = new JPanel ();
 		content.setLayout(new GridLayout(3,2));
+=======
+		// configuring a simple JButton
+		ImageIcon cokeIcon = new ImageIcon("imgs/코카콜라.jpg");
+		JCheckBox coke = new JCheckBox ("COKE", cokeIcon);
+		coke.setBackground (MaterialColors.LIGHT_BLUE_400);
+		coke.setForeground (Color.WHITE);
+		coke.setMaximumSize (new Dimension (200, 200));
+		coke.setBorderPainted(true);
 		
+		
+		BeverageMatarial BM = new BeverageMatarial();
+		BM.Set_bev_CheckBox();
+		Matarial_Ramen MR = new Matarial_Ramen();
+		MR.Set_ram_CheckBox();
+		Matarial_Snack MS = new Matarial_Snack();
+		MS.Set_sna_CheckBox();
+		
+		JPanel content = new JPanel ();
+		content.setLayout(new GridLayout(3,2));
+		
+		for(int i = 0; i<BM.beverage.length;i++) {
+			content.add(BM.beverage[i]);
+		}
+>>>>>>> 45681f28359101a2380d2e491bb73b1b7be6db79
+		
+		//content.add(coke);
 		
 		
 		
@@ -73,9 +99,18 @@ public class MaterialUISwingDemo extends JFrame{
 		tp.addTab("Ramen", rn);
 		frame.add (tp, BorderLayout.CENTER);
 
+		pn.setLayout(new GridLayout(3,2));
+		
+		for(int i = 0; i<MS.Snack_Check.length;i++) {
+			pn.add(MS.Snack_Check[i]);
+		}
+		
+		rn.setLayout(new GridLayout(3,2));
+		
+		for(int i = 0; i<MR.Ramen_Check.length;i++) {
+			rn.add(MR.Ramen_Check[i]);
+		}
 		JEditorPane editorPane = new JEditorPane ();
-		editorPane.setText ("a-a");
-		pn.add (editorPane);
 
 		// make everything visible to the world
 		frame.pack ();

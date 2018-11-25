@@ -13,7 +13,7 @@ public class Matarial_Ramen {
 	public ImageIcon [] Ramen_icon = {new ImageIcon("imgs/ºÒ´ßººÀ½¸é.jpg"), new ImageIcon("imgs/»ï¾ç¶ó¸é.jpg"), 
 			new ImageIcon("imgs/½Å¶ó¸é.jpg"), new ImageIcon("imgs/¿Õ¶Ñ²±.jpg"), new ImageIcon("imgs/Áø¶ó¸é.jpg"), new ImageIcon("imgs/Â¥ÆÄ°ÔÆ¼.jpg")};
 
-	public void Mataial_Ramen(){
+	public void Set_ram_CheckBox(){
 		MyItemListener listener = new MyItemListener();
 		for(int i=0; i<Ramen_Check.length; i++) {
 			Ramen_Check[i] = new JCheckBox(Ramen_names[i],Ramen_icon[i]);
