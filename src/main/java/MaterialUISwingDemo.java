@@ -79,11 +79,6 @@ public class MaterialUISwingDemo extends JFrame{
 		tp.addTab("Ramen", rn);
 		frame.add (tp, BorderLayout.CENTER);
 
-
-		JEditorPane editorPane = new JEditorPane ();
-		editorPane.setText ("a-a");
-		pn.add (editorPane);
-
 		pn.setLayout(new GridLayout(3,2));
 		
 		for(int i = 0; i<MS.Snack_Check.length;i++) {
