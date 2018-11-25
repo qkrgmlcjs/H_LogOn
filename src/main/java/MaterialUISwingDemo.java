@@ -34,15 +34,21 @@ public class MaterialUISwingDemo extends JFrame{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
-		new BeverageMatarial();
-		
-		JPanel content = new JPanel ();
-		content.setLayout(new GridLayout(3,2));
-		
-		
-		
-		
 
+		 BeverageMatarial BM = new BeverageMatarial();
+	      BM.Set_bev_CheckBox();
+	      Matarial_Ramen MR = new Matarial_Ramen();
+	      MR.Set_ram_CheckBox();
+	      Matarial_Snack MS = new Matarial_Snack();
+	      MS.Set_sna_CheckBox();
+	      
+	      JPanel content = new JPanel ();
+	      content.setLayout(new GridLayout(3,2));
+	      
+	      for(int i = 0; i<BM.beverage.length;i++) {
+	         content.add(BM.beverage[i]);
+	      }
+	      
 		// add everything to the frame
 		//frame.add (bar, BorderLayout.PAGE_START);
 		frame.add (content, BorderLayout.CENTER);
