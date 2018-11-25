@@ -24,8 +24,8 @@ public class Matarial_Ramen {
 			Ramen_Check[i].addItemListener(listener);
 		}
 		for(int i=0; i<Ramen_Check.length; i++) {
-			ImageIcon selectedicon = new ImageIcon(Ramen_icon[i]);
-			Ramen_Check[i].setSelectedIcon(selectedicon);
+			//ImageIcon selectedicon = new ImageIcon(Ramen_icon[i]);
+			//Ramen_Check[i].setSelectedIcon(selectedicon);
 		}
 	
 	}
