@@ -28,10 +28,12 @@ public class Matarial_Snack {
 			//frame.add(beverage[i]);
 			Snack_Check[i].addItemListener(listener);
 		}
+		/*
 		for(int i=0; i<Snack_Check.length; i++) {
 			ImageIcon selectedicon = new ImageIcon(Snack_names[i]);
 			Snack_Check[i].setSelectedIcon(selectedicon);
 		}
+		*/
 	}
 }
 

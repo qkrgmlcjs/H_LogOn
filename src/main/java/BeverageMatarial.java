@@ -27,13 +27,20 @@ public class BeverageMatarial extends JFrame{
 		
 		for(int i=0; i<beverage.length; i++) {
 			beverage[i] = new JCheckBox(beveragenames[i], beverageicon[i], false);
+
 			beverage[i].setBackground (MaterialColors.LIGHT_BLUE_400);
 			beverage[i].setForeground (Color.WHITE);
 			beverage[i].setMaximumSize (new Dimension (200, 200));
 			beverage[i].setBorderPainted(true);
 			beverage[i].addItemListener(listener);
-			beverage[i].setSelectedIcon(beverageicon[i]);
 		}
+	/*
+		for(int i=0; i<beverage.length; i++) {
+			ImageIcon selectedicon = new ImageIcon();
+			beverage[i].setSelectedIcon(beverageicon[i]);
+
+		}
+		*/
 	}
 }
 

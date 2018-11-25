@@ -24,10 +24,10 @@ public class Matarial_Ramen {
 			//frame.add(beverage[i]);
 			Ramen_Check[i].addItemListener(listener);
 		}
-		for(int i=0; i<Ramen_Check.length; i++) {
-			ImageIcon selectedicon = new ImageIcon();
-			Ramen_Check[i].setSelectedIcon(selectedicon);
-		}
+		//for(int i=0; i<Ramen_Check.length; i++) {
+		//	ImageIcon selectedicon = new ImageIcon();
+			//Ramen_Check[i].setSelectedIcon(selectedicon);
+		//}
 	
 	}
 }
