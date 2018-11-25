@@ -18,13 +18,13 @@ import mdlaf.utils.MaterialColors;
 
 public class MaterialUISwingDemo extends JFrame{
 	public static void main(String[] args) {
-		/*try {
+		try {
 			UIManager.setLookAndFeel (new MaterialLookAndFeel ());
 		}
 		catch (UnsupportedLookAndFeelException e) {
 			e.printStackTrace ();
 		}
-	*/
+	
 		// basic instantiation of JFrame with various components, including a
 		// JMenuBar with some menus and items, as well as a button
 		JFrame frame = new JFrame ("Material Design UI for Swing by atharva washimkar");
@@ -73,10 +73,22 @@ public class MaterialUISwingDemo extends JFrame{
 		tp.addTab("Ramen", rn);
 		frame.add (tp, BorderLayout.CENTER);
 
+
 		JEditorPane editorPane = new JEditorPane ();
 		editorPane.setText ("a-a");
 		pn.add (editorPane);
 
+		pn.setLayout(new GridLayout(3,2));
+		
+		for(int i = 0; i<MS.Snack_Check.length;i++) {
+			pn.add(MS.Snack_Check[i]);
+		}
+		
+		rn.setLayout(new GridLayout(3,2));
+		
+		for(int i = 0; i<MR.Ramen_Check.length;i++) {
+			rn.add(MR.Ramen_Check[i]);
+		}
 		// make everything visible to the world
 		frame.pack ();
 		frame.setVisible (true);
