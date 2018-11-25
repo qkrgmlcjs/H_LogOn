@@ -8,8 +8,9 @@ import mdlaf.utils.MaterialColors;
 
 public class Matarial_Ramen {
 	public JCheckBox [] Ramen_Check = new JCheckBox [6];
+
 	private String [] Ramen_names = {"Firechicken", "Samyang", "Spicyramen", "KingDDuGGung", "Jin_ramen", "JJapagetti"};
-	private ImageIcon [] Ramen_icon = {new ImageIcon("imgs/ºÒ´ßººÀ½¸é.jpg"), new ImageIcon("imgs/»ï¾ç¶ó¸é.jpg"), 
+	public ImageIcon [] Ramen_icon = {new ImageIcon("imgs/ºÒ´ßººÀ½¸é.jpg"), new ImageIcon("imgs/»ï¾ç¶ó¸é.jpg"), 
 			new ImageIcon("imgs/½Å¶ó¸é.jpg"), new ImageIcon("imgs/¿Õ¶Ñ²±.jpg"), new ImageIcon("imgs/Áø¶ó¸é.jpg"), new ImageIcon("imgs/Â¥ÆÄ°ÔÆ¼.jpg")};
 
 	public void Mataial_Ramen(){
