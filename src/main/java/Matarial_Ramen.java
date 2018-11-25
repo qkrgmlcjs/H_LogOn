@@ -19,14 +19,14 @@ public class Matarial_Ramen {
 			Ramen_Check[i] = new JCheckBox(Ramen_names[i],Ramen_icon[i]);
 			Ramen_Check[i].setBackground (MaterialColors.LIGHT_BLUE_400);
 			Ramen_Check[i].setForeground (Color.WHITE);
-			//Ramen_Check[i].setMaximumSize (new Dimension (200, 200));
+			Ramen_Check[i].setMaximumSize (new Dimension (200, 200));
 			Ramen_Check[i].setBorderPainted(true);
 			//frame.add(beverage[i]);
 			Ramen_Check[i].addItemListener(listener);
 		}
 		for(int i=0; i<Ramen_Check.length; i++) {
-			//ImageIcon selectedicon = new ImageIcon(Ramen_icon[i]);
-			//Ramen_Check[i].setSelectedIcon(selectedicon);
+			ImageIcon selectedicon = new ImageIcon();
+			Ramen_Check[i].setSelectedIcon(selectedicon);
 		}
 	
 	}

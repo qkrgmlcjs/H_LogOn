@@ -104,8 +104,7 @@ public class MaterialUISwingDemo extends JFrame{
 		for(int i = 0; i<MR.Ramen_Check.length;i++) {
 			rn.add(MR.Ramen_Check[i]);
 		}
-		JEditorPane editorPane = new JEditorPane ();
-
+		
 		// make everything visible to the world
 		frame.pack ();
 		frame.setVisible (true);
