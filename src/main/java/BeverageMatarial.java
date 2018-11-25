@@ -15,7 +15,7 @@ import mdlaf.utils.MaterialColors;
 
 public class BeverageMatarial extends JFrame{
 	JCheckBox [] beverage = new JCheckBox [6];
-	private String [] beveragenames = {"물", "코카콜라", "스프라이트", "오렌지쥬스", "웰치스", "환타파인"};
+	private String [] beveragenames = {"Water", "Coke", "Sprite", "OrangeJuice", "Welchis", "Fanta_pine"};
 	private ImageIcon [] beverageicon = {new ImageIcon("imgs/물.jpg"), 
 			new ImageIcon("imgs/코카콜라.jpg"), new ImageIcon("imgs/스프라이트.jpg"), new ImageIcon("imgs/오렌지쥬스.jpg"), 
 			new ImageIcon("imgs/웰치스.jpg"), new ImageIcon("imgs/환타파인.jpg")};
