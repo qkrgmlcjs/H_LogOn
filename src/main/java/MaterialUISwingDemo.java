@@ -1,10 +1,10 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.GridLayout;
 
-import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.ImageIcon;
 import javax.swing.JEditorPane;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -14,6 +14,7 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 import mdlaf.MaterialLookAndFeel;
+import mdlaf.animation.MaterialUIMovement;
 import mdlaf.utils.MaterialColors;
 
 public class MaterialUISwingDemo extends JFrame{
@@ -47,7 +48,6 @@ public class MaterialUISwingDemo extends JFrame{
 	
 		
 		JPanel content = new JPanel ();
-		content.setLayout(new GridLayout(3,2));
 		for(int i = 0 ; i<BM.beverage.length;i++) {
 			content.add(BM.beverage[i]);
 		}
