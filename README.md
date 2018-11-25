@@ -1,37 +1,56 @@
-# 오픈소스 GitHub 협업 H팀 H_LogOn
+# material-ui-swing
+A modern, Material Design UI for Java Swing
 
-### 팀원 : 박희천, 임채진, 최은지
--------------------------------
+Skins JComponents to have a Material Design Look and Feel. Most components are responsive, with hover effects, and click effects (no ripple unfortunately). Fonts included.
 
+Screenshot in action below (chessboard not included 😛):
 
+![Screenshot](http://i.imgur.com/WsprAM6.png?1)
 
-## 구현내용
-----------
-### 무인편의점결제창
-  
-  * 음료수 (코카콜라1000원, 스프라이트1000원, 오렌지쥬스2000원, 환타1200원, 웰치스1300원, 삼다수800원)
-    * 음료수 항목들
-      * 이미지
-      * 이름
-      * 가격
-      * 담기
-    * 음료수 Total
-    
-  * 과자 (포테토칩1200원, 프링글스2000원, 새우깡1000원, 꼬깔콘1100원, 바나나킥1100원, 콘칩1100원)
-  
-  * 컵라면 (불닭1400원, 신라면1050원, 진라면1050원, 삼양라면1050원, 왕뚜껑1050원, 짜파게티1400원)
-  
-  * 장바구니_진한
-    * 장바구니에 담은 항목들
-      * 체크박스(선택취소 가능)
-      * 이미지
-      * 이름
-      * 가격
-    * 결제
-      * Total - 크기 3의 배열을 만들어 음료수, 과자, 컵라면의 총액
-      * 결제
-         * 결제 완료창_대화상자
+# Usage
 
-## 구현결과
-----------
+Go to the releases (or just the `target/classes` folder in the repo) and download the latest version of `material-ui-swing.jar`. The OSGi version is available under `target`. Add it to your project's build path (e.g. for IntelliJ [this](https://www.jetbrains.com/help/idea/import-project-from-existing-sources-libraries-page.html) might help), and you're all set!
 
+## Example
+
+````java
+import mdlaf.*;
+import mdlaf.animation.*;
+import javax.swing.*;
+import java.awt.*;
+
+public class MaterialUISwingDemo {
+
+	public static void main (String[] args) {
+		try {
+			UIManager.setLookAndFeel (new MaterialLookAndFeel ());
+		}
+		catch (UnsupportedLookAndFeelException e) {
+			e.printStackTrace ();
+		}
+
+		JFrame frame = new JFrame ("Material Design UI for Swing by atharva washimkar");
+		frame.setMinimumSize (new Dimension (600, 400));
+
+		JButton button = new JButton ("PRESS ME");
+		button.setMaximumSize (new Dimension (200, 200));
+
+		JPanel content = new JPanel ();
+		content.add (button);
+		frame.add (content, BorderLayout.CENTER);
+
+		// on hover, button will change to a light gray
+		MaterialUIMovement.add (button, MaterialColors.GRAY_100);
+
+		frame.pack ();
+		frame.setVisible (true);
+	}
+}
+````
+
+Check `src/main/java/MaterialUISwingDemo.java` for a slightly longer example of how to use this library (and an explanation of what everything means/does).
+For a real-world example of usage, see [here](https://github.com/atarw/washer-chess).
+
+# Misc
+
+If there's a component that isn't supported, don't hesitate to open an issue! I can usually code something up for you in a couple of days 😀
