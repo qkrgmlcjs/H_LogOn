@@ -15,7 +15,7 @@ import mdlaf.utils.MaterialColors;
 
 public class BeverageMatarial extends JFrame{
 	JCheckBox [] beverage = new JCheckBox [6];
-	private String [] beveragenames = {"Water", "Coke", "Sprite", "OrangeJuice", "Welchis", "Fanta_pine"};
+	public String [] beveragenames = {"Water", "Coke", "Sprite", "OrangeJuice", "Welchis", "Fanta_pine"};
 	private ImageIcon [] beverageicon = {new ImageIcon("imgs/물.jpg"), 
 			new ImageIcon("imgs/코카콜라.jpg"), new ImageIcon("imgs/스프라이트.jpg"), new ImageIcon("imgs/오렌지쥬스.jpg"), 
 			new ImageIcon("imgs/웰치스.jpg"), new ImageIcon("imgs/환타파인.jpg")};
@@ -24,10 +24,10 @@ public class BeverageMatarial extends JFrame{
 	public  BeverageMatarial(){
 		MyItemListener listener = new MyItemListener();
 		for(int i=0; i<beverage.length; i++) {
-			beverage[i] = new JCheckBox(beveragenames[i]);
+			beverage[i] = new JCheckBox(beveragenames[i],beverageicon[i]);
 			beverage[i].setBackground (MaterialColors.LIGHT_BLUE_400);
 			beverage[i].setForeground (Color.WHITE);
-			beverage[i].setMaximumSize (new Dimension (200, 200));
+			//beverage[i].setMaximumSize (new Dimension (200, 200));
 			beverage[i].setBorderPainted(true);
 			beverage[i].addItemListener(listener);
 		}
