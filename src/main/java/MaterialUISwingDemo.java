@@ -18,13 +18,13 @@ import mdlaf.utils.MaterialColors;
 
 public class MaterialUISwingDemo extends JFrame{
 	public static void main(String[] args) {
-		/*try {
+		try {
 			UIManager.setLookAndFeel (new MaterialLookAndFeel ());
 		}
 		catch (UnsupportedLookAndFeelException e) {
 			e.printStackTrace ();
 		}
-	*/
+	
 		// basic instantiation of JFrame with various components, including a
 		// JMenuBar with some menus and items, as well as a button
 		JFrame frame = new JFrame ("Material Design UI for Swing by atharva washimkar");

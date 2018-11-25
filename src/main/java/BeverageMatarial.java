@@ -24,17 +24,19 @@ public class BeverageMatarial extends JFrame{
 	public void Set_bev_CheckBox(){
 		MyItemListener listener = new MyItemListener();
 		for(int i=0; i<beverage.length; i++) {
-			beverage[i] = new JCheckBox(beveragenames[i]);
+			beverage[i] = new JCheckBox(beveragenames[i],beverageicon[i]);
 			beverage[i].setBackground (MaterialColors.LIGHT_BLUE_400);
 			beverage[i].setForeground (Color.WHITE);
 			beverage[i].setMaximumSize (new Dimension (200, 200));
 			beverage[i].setBorderPainted(true);
 			beverage[i].addItemListener(listener);
 		}
+	/*
 		for(int i=0; i<beverage.length; i++) {
 			ImageIcon selectedicon = new ImageIcon();
 			beverage[i].setSelectedIcon(selectedicon);
 		}
+		*/
 	}
 }
 
