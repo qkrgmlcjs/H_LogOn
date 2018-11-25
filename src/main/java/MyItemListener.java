@@ -19,8 +19,21 @@ public class MyItemListener implements ItemListener {
 				sum+=2000;
 			else if(e.getItem()==beveragenames[4])
 				sum+=1300;
-			else
+			else if(e.getItem()==beveragenames[5])
 				sum+=1200;
+			else if(e.getItem()==Ramen_names[0])
+				sum+=1400;
+			else if(e.getItem()==Ramen_names[1])
+				sum+=1050;
+			else if(e.getItem()==Ramen_names[2])
+				sum+=1050;
+			else if(e.getItem()==Ramen_names[3])
+				sum+=1050;
+			else if(e.getItem()==Ramen_names[4])
+				sum+=1400;
+			else if(e.getItem()==Ramen_names[5])
+				sum+=1050;
+			
 		}
 		else {
 			if(e.getItem()==beveragenames[0])
