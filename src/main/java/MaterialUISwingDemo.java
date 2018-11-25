@@ -34,34 +34,21 @@ public class MaterialUISwingDemo extends JFrame{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
-		// configuring a simple JButton
-		ImageIcon cokeIcon = new ImageIcon("imgs/코카콜라.jpg");
-		JCheckBox coke = new JCheckBox ("COKE", cokeIcon);
-		coke.setBackground (MaterialColors.LIGHT_BLUE_400);
-		coke.setForeground (Color.WHITE);
-		coke.setMaximumSize (new Dimension (200, 200));
-		coke.setBorderPainted(true);
-		
-		
-		BeverageMatarial BM = new BeverageMatarial();
-		BM.Set_bev_CheckBox();
-		Matarial_Ramen MR = new Matarial_Ramen();
-		MR.Set_ram_CheckBox();
-		Matarial_Snack MS = new Matarial_Snack();
-		MS.Set_sna_CheckBox();
-		
-		JPanel content = new JPanel ();
-		content.setLayout(new GridLayout(3,2));
-		
-		for(int i = 0; i<BM.beverage.length;i++) {
-			content.add(BM.beverage[i]);
-		}
-		
-		//content.add(coke);
-		
-		
-		
 
+		 BeverageMatarial BM = new BeverageMatarial();
+	      BM.Set_bev_CheckBox();
+	      Matarial_Ramen MR = new Matarial_Ramen();
+	      MR.Set_ram_CheckBox();
+	      Matarial_Snack MS = new Matarial_Snack();
+	      MS.Set_sna_CheckBox();
+	      
+	      JPanel content = new JPanel ();
+	      content.setLayout(new GridLayout(3,2));
+	      
+	      for(int i = 0; i<BM.beverage.length;i++) {
+	         content.add(BM.beverage[i]);
+	      }
+	      
 		// add everything to the frame
 		//frame.add (bar, BorderLayout.PAGE_START);
 		frame.add (content, BorderLayout.CENTER);
@@ -82,7 +69,6 @@ public class MaterialUISwingDemo extends JFrame{
 		//일단은 놔둬보자 
 
 		JScrollPane sp = new JScrollPane (content);
-		sp.setHorizontalScrollBarPolicy (JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 		sp.setVerticalScrollBarPolicy (JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
 		JPanel pn = new JPanel ();
@@ -92,6 +78,11 @@ public class MaterialUISwingDemo extends JFrame{
 		tp.addTab ("Snack", pn);
 		tp.addTab("Ramen", rn);
 		frame.add (tp, BorderLayout.CENTER);
+
+
+		JEditorPane editorPane = new JEditorPane ();
+		editorPane.setText ("a-a");
+		pn.add (editorPane);
 
 		pn.setLayout(new GridLayout(3,2));
 		
@@ -104,7 +95,6 @@ public class MaterialUISwingDemo extends JFrame{
 		for(int i = 0; i<MR.Ramen_Check.length;i++) {
 			rn.add(MR.Ramen_Check[i]);
 		}
-		
 		// make everything visible to the world
 		frame.pack ();
 		frame.setVisible (true);
