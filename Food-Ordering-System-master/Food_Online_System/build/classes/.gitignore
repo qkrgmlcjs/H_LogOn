@@ -21,6 +21,13 @@
 /LazyMode$1.class
 /LazyMode$3.class
 /LazyMode$4.class
+/LazyMode$1.class
+/LazyMode$2.class
+/LazyMode$3.class
+/LazyMode$4.class
+/LazyMode$5$1.class
+/LazyMode$5.class
+/LazyMode.class
 /MainWindow$1.class
 /MainWindow$10.class
 /MainWindow$11.class
@@ -54,6 +61,8 @@
 /SignInJDialog$8.class
 /SignInJDialog$9.class
 /SignInJDialog.class
+
+/SummaryJDialog.class
 /SummaryJDialog$1.class
 /SummaryJDialog$10$1.class
 /SummaryJDialog$10.class
@@ -65,7 +74,10 @@
 /SummaryJDialog$7.class
 /SummaryJDialog$8.class
 /SummaryJDialog$9.class
+<<<<<<< HEAD
 /SummaryJDialog.class
+=======
+>>>>>>> 37746d42b2e04106cb4afc0b69875d12340be723
 /UserAccount$1.class
 /UserAccount$10$1.class
 /UserAccount$10.class
@@ -79,3 +91,7 @@
 /UserAccount$9.class
 /UserAccount.class
 /model1.class
+<<<<<<< HEAD
+=======
+/Beverage_menu.class
+>>>>>>> 37746d42b2e04106cb4afc0b69875d12340be723

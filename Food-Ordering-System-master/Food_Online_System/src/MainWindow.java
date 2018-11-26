@@ -32,7 +32,7 @@ public class MainWindow extends javax.swing.JFrame {
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents() {
+    public void initComponents() {
 
         orderType_buttonGroup = new javax.swing.ButtonGroup();
         category_jScrollPane = new javax.swing.JScrollPane();
@@ -79,10 +79,14 @@ public class MainWindow extends javax.swing.JFrame {
         FoodCategory_jList.setFont(new java.awt.Font("Tahoma", 3, 14)); // NOI18N
         FoodCategory_jList.setForeground(new java.awt.Color(255, 0, 0));
         FoodCategory_jList.setModel(new javax.swing.AbstractListModel() {
-            String[] strings = { "Specials", "Appetizers", "Soup", "Salad", "Entrees", "Desserts", "Beverage" };
+            String[] strings = { "Beverage", "Snack", "Lamen" };
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
+        /*private JTabbedPane createTabbedPand() {
+        	JTabbedPand pane = new JTabbedPane(JTabbedPane.LEFT);
+        	pane.addTab
+        }*/
         FoodCategory_jList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         FoodCategory_jList.setToolTipText("");
         FoodCategory_jList.setFixedCellHeight(40);
