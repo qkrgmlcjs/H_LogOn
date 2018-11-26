@@ -66,32 +66,32 @@ MainWindow.foodPrice6_jTextField.setText(" $"+eElement[5].getElementsByTagName("
 	Document doc = dBuilder.parse(fXmlFile);
       
 	doc.getDocumentElement().normalize();
-      if(cata.equals("Specials") ){
-        Node node =  doc.getElementsByTagName("Specials").item(0);
+      if(cata.equals("Beverage") ){
+        Node node =  doc.getElementsByTagName("Beverage").item(0);
         Element aElement = (Element) node;
         NodeList list= aElement.getElementsByTagName("food"); 
         settingButton(list);
-        MainWindow.Category_jLabel.setText("Today's Special:");
+        MainWindow.Category_jLabel.setText("Today's Beverage:");
         
      String[] test={"a1", "a2", "a3", "a4", "a5", "a6"};
       MainWindow.buttonID=test;
       }
-      else if(cata.equals("Appetizers") ){
-        Node node =  doc.getElementsByTagName("Appetizers").item(0);
+      else if(cata.equals("Snack") ){
+        Node node =  doc.getElementsByTagName("Snack").item(0);
         Element aElement = (Element) node;
         NodeList list= aElement.getElementsByTagName("food"); 
         settingButton(list);
-        MainWindow.Category_jLabel.setText("Today's Appetizer :");
+        MainWindow.Category_jLabel.setText("Today's Snack :");
        
        String[] test={"b1", "b2", "b3", "b4", "b5", "b6"};
       MainWindow.buttonID=test;
       }
-      else if(cata.equals("Soup") ){
-        Node node =  doc.getElementsByTagName("Soup").item(0);
+      else if(cata.equals("Lamen") ){
+        Node node =  doc.getElementsByTagName("Lamen").item(0);
         Element aElement = (Element) node;
         NodeList list= aElement.getElementsByTagName("food"); 
         settingButton(list);
-        MainWindow.Category_jLabel.setText("Today's Soup :");
+        MainWindow.Category_jLabel.setText("Today's Lamen :");
         
       String[] test={"c1", "c2", "c3", "c4", "c5", "c6"};
       MainWindow.buttonID=test;
@@ -126,16 +126,7 @@ MainWindow.foodPrice6_jTextField.setText(" $"+eElement[5].getElementsByTagName("
          String[] test={"f1", "f2", "f3", "f4", "f5", "f6"};
         MainWindow.buttonID=test;
       }
-      else if(cata.equals("Beverage") ){
-        Node node =  doc.getElementsByTagName("Beverage").item(0);
-        Element aElement = (Element) node;
-        NodeList list= aElement.getElementsByTagName("food"); 
-        settingButton(list);
-        MainWindow.Category_jLabel.setText("Today's Beverage :");
-        
-        String[] test={"g1", "g2", "g3", "g4", "g5", "g6"};
-        MainWindow.buttonID=test;
-      }  
+      
      else{
     FoodName = doc.getElementById(cata).getElementsByTagName("foodName").item(0).getTextContent();
     FoodPrice= doc.getElementById(cata).getElementsByTagName("foodPrice").item(0).getTextContent();
