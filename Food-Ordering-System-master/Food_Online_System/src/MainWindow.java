@@ -524,7 +524,7 @@ public class MainWindow extends javax.swing.JFrame {
         ReadXMLDataBase data =new ReadXMLDataBase();
         data.readData(buttonID[1]);
         dialog.course_jTextField.setText(data.FoodName);
-        dialog.price_jTextField.setText(" $"+data.FoodPrice);
+        dialog.price_jTextField.setText("\\"+data.FoodPrice);
         dialog.foodPic_jLabel.setIcon(new javax.swing.ImageIcon(getClass().getResource(data.Iamge2Url)));
         dialog.food_jTextArea.setText(data.FoodDescrip);
         dialog.createFoodItemDialog();
