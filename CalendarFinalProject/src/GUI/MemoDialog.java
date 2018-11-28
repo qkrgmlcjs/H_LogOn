@@ -2,39 +2,11 @@ package GUI;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.FlowLayout;
-
-import javax.swing.BorderFactory;
-import javax.swing.DefaultListModel;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-import toDo.EmptyToDoException;
-import toDo.TimeInputException;
-import toDo.ToDo;
-
-import javax.swing.JScrollPane;
-import java.awt.GridLayout;
-import javax.swing.ScrollPaneConstants;
-import javax.swing.JLabel;
-import javax.swing.JList;
-import javax.swing.JOptionPane;
-import javax.swing.JTextField;
-import javax.swing.JTextPane;
-
-import com.jgoodies.forms.layout.FormLayout;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.RowSpec;
-
-import com.jgoodies.forms.factories.FormFactory;
-
-import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 import java.awt.Insets;
-import javax.swing.JTable;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.EOFException;
 import java.io.File;
@@ -44,12 +16,30 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.RandomAccessFile;
-import java.util.Collections;
 import java.util.LinkedList;
-import java.util.Scanner;
-import java.awt.event.ActionEvent;
-import javax.swing.JComboBox;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.border.EmptyBorder;
+
+import com.jgoodies.forms.factories.FormFactory;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.RowSpec;
+
+import toDo.EmptyToDoException;
+import toDo.TimeInputException;
+import toDo.ToDo;
 
 public class MemoDialog extends JDialog implements ActionListener {
 
@@ -186,13 +176,14 @@ public class MemoDialog extends JDialog implements ActionListener {
 			}
 
 			{
+				//대화상자 오른쪽상단 버튼 그룹(Add,Edit,Delete)
 				pnRight = new JPanel();
 				pnDayView.add(pnRight);
 				pnRight.setLayout(new BorderLayout(0, 0));
 				{
 					pnButtons = new JPanel();
 					pnRight.add(pnButtons, BorderLayout.NORTH);
-					pnButtons.setLayout(new GridLayout(0, 3, 0, 0));
+					pnButtons.setLayout(new GridLayout(0, 3, 0, 0)); //3칸 grid Layout으로
 					{
 						btnAdd = new JButton("Add");
 						btnAdd.addActionListener(this);
@@ -238,6 +229,14 @@ public class MemoDialog extends JDialog implements ActionListener {
 							gbc_lblTime.gridx = 1;
 							gbc_lblTime.gridy = 0;
 							panel.add(lblTime, gbc_lblTime);
+						}
+						{
+							JLabel lblcheck = new JLabel("Check");
+							GridBagConstraints gbc_lblcheck = new GridBagConstraints();
+							gbc_lblcheck .fill = GridBagConstraints.EAST;
+							gbc_lblcheck.gridx = 1;
+							gbc_lblcheck.gridy = 0;
+							panel.add(lblcheck,gbc_lblcheck);
 						}
 					}
 
