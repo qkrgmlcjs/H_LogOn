@@ -2,14 +2,17 @@ package toDo;
 
 import java.io.Serializable;
 
+import javax.swing.JCheckBox;
+
 public class ToDo implements Serializable, Comparable<ToDo> {
 	private String todo;
 	private int fromHour;
 	private int fromMinute;
 	private int toHour;
 	private int toMinute;
+	private JCheckBox tdcheck;
 
-	public ToDo(String todo, int fromHour, int fromMinute, int toHour, int toMinute)
+	public ToDo(String todo, int fromHour, int fromMinute, int toHour, int toMinute, JCheckBox tdcheck)
 			throws EmptyToDoException, TimeInputException {
 		super();
 		setTodo(todo);
@@ -17,12 +20,18 @@ public class ToDo implements Serializable, Comparable<ToDo> {
 		setFromMinute(fromMinute);
 		setToHour(toHour);
 		setToMinute(toMinute);
+		new JCheckBox();
 	}
 
 	public String getTodo() {
 		return todo;
 	}
-
+	public void settdCheck() {
+		this.tdcheck = new JCheckBox();
+	}
+	public JCheckBox gettdcheck() {
+		return tdcheck;
+	}
 	public void setTodo(String todo) throws EmptyToDoException {
 		if (todo.length() < 1)
 			throw new EmptyToDoException();
@@ -38,6 +47,7 @@ public class ToDo implements Serializable, Comparable<ToDo> {
 
 		this.fromHour = fromHour;
 	}
+	
 
 	public int getFromMinute() {
 		return fromMinute;

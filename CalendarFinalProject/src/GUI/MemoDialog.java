@@ -290,6 +290,7 @@ public class MemoDialog extends JDialog implements ActionListener {
 		int toHour;
 		int toMinute;
 		label= new JLabel_1[todoNum()];
+		JCheckBox tdCheck = new JCheckBox();
 		pn.updateUI();
 		try {
 			File f = new File(fileName);
@@ -307,8 +308,9 @@ public class MemoDialog extends JDialog implements ActionListener {
 					fromMinute = td.get(i).getFromMinute();
 					toHour = td.get(i).getToHour();
 					toMinute = td.get(i).getToMinute();
+					
 
-					listModel.addElement(new ToDo(to_do, fromHour, fromMinute, toHour, toMinute));
+					listModel.addElement(new ToDo(to_do, fromHour, fromMinute, toHour, toMinute,tdCheck));
 
 					startPoint = fromHour;
 					length = toHour - startPoint-1;

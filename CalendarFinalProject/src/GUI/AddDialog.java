@@ -207,6 +207,7 @@ public class AddDialog extends JDialog {
 						calendar.setTime(time);
 
 						String event = txtEventName.getText();
+						
 
 						int startHour = calendar.get(Calendar.HOUR);
 						int startMinute = calendar.get(Calendar.MINUTE);
@@ -222,7 +223,7 @@ public class AddDialog extends JDialog {
 						amPm = calendar.get(Calendar.AM_PM);
 						if (amPm == 1)
 							endHour += 12;
-
+						JCheckBox tdCheck = new JCheckBox();
 						File f = new File("TodoData");
 						if (!f.isDirectory())
 							f.mkdir();
@@ -236,7 +237,7 @@ public class AddDialog extends JDialog {
 								// save the data to file
 								ObjectOutputStream os = new ObjectOutputStream(new FileOutputStream(fileName));
 								LinkedList<ToDo> tmp = new LinkedList<ToDo>();
-								tmp.add(new ToDo(event, startHour, startMinute, endHour, endMinute));
+								tmp.add(new ToDo(event, startHour, startMinute, endHour, endMinute,tdCheck));
 								os.writeObject(tmp);
 								tmp.clear();
 								os.close();
@@ -249,7 +250,7 @@ public class AddDialog extends JDialog {
 								LinkedList<ToDo> tmp = (LinkedList<ToDo>) is.readObject();
 
 								// add new event to object tmp
-								tmp.add(new ToDo(event, startHour, startMinute, endHour, endMinute));
+								tmp.add(new ToDo(event, startHour, startMinute, endHour, endMinute,tdCheck));
 
 								// sort events by time
 								Collections.sort(tmp);
