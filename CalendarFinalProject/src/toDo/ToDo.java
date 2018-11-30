@@ -20,7 +20,7 @@ public class ToDo implements Serializable, Comparable<ToDo> {
 		setFromMinute(fromMinute);
 		setToHour(toHour);
 		setToMinute(toMinute);
-		new JCheckBox();
+		tdcheck = new JCheckBox();	
 	}
 
 	public String getTodo() {

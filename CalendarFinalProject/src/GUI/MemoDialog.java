@@ -29,6 +29,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
+import javax.swing.ListSelectionModel;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.border.EmptyBorder;
 
@@ -243,9 +244,11 @@ public class MemoDialog extends JDialog implements ActionListener {
 					{
 
 						listModel = new DefaultListModel<ToDo>();
+						
 						readTodo();
 						list = new JList<ToDo>(listModel);
-
+						list.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+						
 						pnEvents.add(list, BorderLayout.CENTER);
 					}
 				}
@@ -318,6 +321,7 @@ public class MemoDialog extends JDialog implements ActionListener {
 					String str = (listModel.getSize()*2+2)+", "+(startPoint*2+2)+", "+ 1 +", "+(length*2+1);
 					label[i] = new JLabel_1(fromHour,toHour,to_do);
 					pn.add(label[i],str);
+					
 				}
 				is.close();
 			} 
@@ -423,8 +427,8 @@ public class MemoDialog extends JDialog implements ActionListener {
 				dlgAdd = new AddDialog((MemoDialog)this, flag);
 				dlgAdd.setVisible(true);
 				readTodo();
-				dispose();
-				dispose();
+				//dispose();
+				//dispose();
 		
 			}	
 		}
@@ -441,7 +445,7 @@ public class MemoDialog extends JDialog implements ActionListener {
 					deleteData();
 					setVisible(true);
 					readTodo();
-					dispose();
+					//dispose();
 				
 				}
 			}
