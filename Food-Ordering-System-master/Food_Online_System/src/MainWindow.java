@@ -1,5 +1,7 @@
 
 import javax.swing.JOptionPane;
+import javax.swing.*;
+import java.awt.*;
 
 
 
@@ -83,9 +85,12 @@ public class MainWindow extends javax.swing.JFrame {
             public int getSize() { return strings.length; }
             public Object getElementAt(int i) { return strings[i]; }
         });
-        /*private JTabbedPane createTabbedPand() {
-        	JTabbedPand pane = new JTabbedPane(JTabbedPane.LEFT);
-        	pane.addTab
+        /*private JTabbedPane createTabbedPane() {
+        	JTabbedPane pane = new JTabbedPane(JTabbedPane.LEFT);
+        	pane.addTab("strings[0]");
+        	pane.addTab("strings[1]");
+        	pane.addTab("strings[2]");
+        	return pane;
         }*/
         FoodCategory_jList.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         FoodCategory_jList.setToolTipText("");
