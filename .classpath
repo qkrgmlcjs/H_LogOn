@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<classpath>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="src" path="Food-Ordering-System-master/Food_Online_System/src"/>
-	<classpathentry kind="lib" path="Food-Ordering-System-master/Food_Online_System/dist/Food_Online_System.jar"/>
-	<classpathentry kind="lib" path="Food-Ordering-System-master/Food_Online_System/dist/lib/AbsoluteLayout.jar"/>
-	<classpathentry kind="lib" path="Food-Ordering-System-master/Food_Online_System/dist/lib/swingx-all-1.6.4.jar"/>
-	<classpathentry kind="output" path="Food-Ordering-System-master/Food_Online_System/build/classes"/>
-</classpath>
