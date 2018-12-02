@@ -171,6 +171,7 @@ public class CalendarGUI extends DateManager {
 		for (int i = 0; i < ROW; i++) {
 			for (int j = 0; j < COLUMN; j++) {
 				dateButs[i][j] = new JButton();
+				
 				dateButs[i][j].setBorderPainted(true);
 				dateButs[i][j].setContentAreaFilled(false);
 				dateButs[i][j].setBackground(Color.WHITE);

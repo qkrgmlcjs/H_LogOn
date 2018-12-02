@@ -27,6 +27,7 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTextPane;
 import javax.swing.ListSelectionModel;
@@ -54,6 +55,7 @@ public class MemoDialog extends JDialog implements ActionListener {
 	private JButton btnAdd;
 	private JButton btnEdit;
 	private JButton btnDelete;
+	private JButton btnComplete; 
 	private AddDialog dlgAdd;
 	private JTextPane tpDayRows[];
 	private JLabel_1 [] label;
@@ -184,7 +186,7 @@ public class MemoDialog extends JDialog implements ActionListener {
 				{
 					pnButtons = new JPanel();
 					pnRight.add(pnButtons, BorderLayout.NORTH);
-					pnButtons.setLayout(new GridLayout(0, 3, 0, 0)); //3Ä­ grid LayoutÀ¸·Î
+					pnButtons.setLayout(new GridLayout(0, 4, 0, 0)); //4Ä­ grid LayoutÀ¸·Î
 					{
 						btnAdd = new JButton("Add");
 						btnAdd.addActionListener(this);
@@ -199,6 +201,14 @@ public class MemoDialog extends JDialog implements ActionListener {
 						btnDelete = new JButton("Delete");
 						btnDelete.addActionListener(this);
 						pnButtons.add(btnDelete);
+					}
+					{
+						btnComplete = new JButton("complete");
+						btnComplete.addActionListener(this);
+						pnButtons.add(btnComplete);
+					}
+					{
+						JRadioButton btnWeather = new JRadioButton();
 					}
 				}
 				{
@@ -449,6 +459,23 @@ public class MemoDialog extends JDialog implements ActionListener {
 				
 				}
 			}
+		}
+		else if (e.getSource() == btnComplete) {
+			
+			flag = 1;
+			
+			index = list.getSelectedIndex();
+			if (index == -1) {
+				JOptionPane.showMessageDialog(null, "Please select event", "Not Selected", JOptionPane.ERROR_MESSAGE);
+				setVisible(true);
+			} else {
+				dlgAdd = new AddDialog((MemoDialog)this, flag);
+				dlgAdd.setVisible(true);
+				readTodo();
+				//dispose();
+				//dispose();
+		
+			}	
 		}
 		
 	}
