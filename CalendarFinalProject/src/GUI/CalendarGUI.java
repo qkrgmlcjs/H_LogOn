@@ -49,7 +49,7 @@ public class CalendarGUI extends DateManager {
 	private void initialize() {
 		mainFrame = new JFrame(title);
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		mainFrame.setSize(815, 560);
+		mainFrame.setSize(850, 570);
 		mainFrame.setLocationRelativeTo(null);
 		mainFrame.setIconImage(icon.getImage());
 
