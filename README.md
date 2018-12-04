@@ -1,32 +1,30 @@
-Calendar GUI
----
+H_LogOn
+ =============
+ 
+Memo Calendar
+------------- 
+# Main Window
 
-This is the main window when user open the application
-![ad](https://user-images.githubusercontent.com/35826556/43563100-5cdc9a3c-965b-11e8-84ff-220ed2860330.PNG)
+![Main Window](C:\Users\희천\Desktop\오픈소스\메인창.jpg)
 
->1.	Button to move current date
->2.	Show current date
->3.	Show current time
->4. 
->- '<<': move to previous year
->- '>>': move to next year
->- '<' : move to previous month
->- '>' : move to next month
->5. when the day have to-do, show bold date text.<br>
-    it displays the First works of the day, if the day has more than 1, then display “More…” 
->6. show today green 
+## Main Window Function
 
+1. 오늘 날짜와 시간을 출력해준다
+2. "Today"버튼 - 오늘 날짜를 표시해준다
+3. 각 날짜버튼을 누르면 일정을 추가할 수 있는 대화상자가 뜬다.
+4. * '<<' : 작년 날짜로 보여줌
+   * '>>' : 내년 날짜로 보여줌
+   * '<'  : 지난달 날짜로 보여줌
+   * '>'  : 다음달 날짜로 보여줌
 
-Add/Edit to-do list
----
-![add](https://user-images.githubusercontent.com/35826556/43563232-1f330fc6-965c-11e8-9088-91f17f32d1cc.PNG)
->* input valid check <br>
->start time must be before the end time. <br>
->event name should be input.
+# Add/Edit to-do list
+![Main Window](C:\Users\희천\Desktop\오픈소스\메인창.jpg)
 
+* event 창에 일정을 입력하고 From(시작시간), To(끝나는시간)을 입력하여 일정을 추가한다
 
-Day View Frame
----
-![add1](https://user-images.githubusercontent.com/35826556/43563286-5c8f2ad0-965c-11e8-98f8-04a08117188b.PNG)
->1. to-do lists are arranged according to time order
->2. users can add/edit/delete to-do lists.
+# Day View Frame
+
+![Main Window](C:\Users\희천\Desktop\오픈소스\메인창.jpg)
+
+1. 추가한 할 일이 오른쪽 list에 추가되고 왼쪽 Time-Table에 시간에 맞게 추가된다.
+2. 오른쪽 상단의 버튼을 이용해서 추가/편집/삭제/완료 작업을 할 수 있다.

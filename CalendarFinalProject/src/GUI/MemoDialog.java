@@ -437,7 +437,7 @@ public class MemoDialog extends JDialog implements ActionListener {
 				dlgAdd = new AddDialog((MemoDialog)this, flag);
 				dlgAdd.setVisible(true);
 				readTodo();
-				//dispose();
+				dispose();
 				//dispose();
 		
 			}	
@@ -455,15 +455,15 @@ public class MemoDialog extends JDialog implements ActionListener {
 					deleteData();
 					setVisible(true);
 					readTodo();
-					//dispose();
+					dispose();
 				
 				}
 			}
 		}
 		else if (e.getSource() == btnComplete) {
 			
-			flag = 1;
 			
+<<<<<<< HEAD
 			index = list.getSelectedIndex();
 			if (index == -1) {
 				JOptionPane.showMessageDialog(null, "Please select event", "Not Selected", JOptionPane.ERROR_MESSAGE);
@@ -481,6 +481,14 @@ public class MemoDialog extends JDialog implements ActionListener {
 		
 		
 	}
+=======
+				dispose();
+		
+			}	
+		}
+		
+	
+>>>>>>> e0f24bd2e3f25680311d089fb886fcd2876435ca
 	public int getIndex() {
 		return index;
 	}

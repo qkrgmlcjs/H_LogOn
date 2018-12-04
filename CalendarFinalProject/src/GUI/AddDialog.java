@@ -28,7 +28,10 @@ public class AddDialog extends JDialog {
 	private int fromM;
 	private int toH;
 	private int toM;
-
+	private JRadioButton Weather_sun;
+	private JRadioButton Weather_cloud;
+	private JRadioButton Weather_rain;
+	private JRadioButton Weather_snow;
 	/**
 	 * Create the dialog.
 	 */
@@ -38,6 +41,7 @@ public class AddDialog extends JDialog {
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
+	
 		GridBagLayout gbl_contentPanel = new GridBagLayout();
 		setTitle(CalendarGUI.MONTH_NAME[CalendarGUI.calMonth - 1] + " - " + CalendarGUI.calDayOfMon);
 
@@ -53,6 +57,8 @@ public class AddDialog extends JDialog {
 			gbc_lblEvent.gridy = 0;
 			contentPanel.add(lblEvent, gbc_lblEvent);
 		}
+		
+		
 		{
 			txtEventName = new JTextField();
 
@@ -73,6 +79,11 @@ public class AddDialog extends JDialog {
 						if(toH>12) toH-=12;
 						else toH+=12;
 						tmp.clear();
+						Weather_sun = new JRadioButton("Sun");
+						Weather_cloud = new JRadioButton("Cloud");
+						Weather_rain = new JRadioButton("Rain");
+						Weather_snow = new JRadioButton("Snow");
+						
 						txtEventName.setText(todo);
 					}
 				} catch (IOException e) {
