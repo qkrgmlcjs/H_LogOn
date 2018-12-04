@@ -15,7 +15,7 @@ public class DateManager{
 	static int calDayOfMon;
 	final int calLastDateOfMonth[]={31,28,31,30,31,30,31,31,30,31,30,31};
 	int calLastDate;
-	final static String MONTH_NAME[]= {"January","February","March", "April","June", "July","August", "September", "October","November","December"};
+	final static String MONTH_NAME[]= {"1월","2월","3월","4월", "5월","6월","7월","8월", "9월", "10월","11월","12월"};
 	
 	Calendar today = Calendar.getInstance();
 	Calendar cal;

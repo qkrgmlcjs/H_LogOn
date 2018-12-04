@@ -81,7 +81,7 @@ public class MemoDialog extends JDialog implements ActionListener {
 		getContentPane().setLayout(new BorderLayout());
 		pnDayView.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(pnDayView, BorderLayout.CENTER);
-		setTitle(CalendarGUI.MONTH_NAME[CalendarGUI.calMonth - 1] + " - " + CalendarGUI.calDayOfMon);
+		setTitle(CalendarGUI.MONTH_NAME[CalendarGUI.calMonth - 1] + "   " + CalendarGUI.calDayOfMon+"일");
 		pnDayView.setLayout(new GridLayout(0, 2, 0, 0));
 		{
 			spLeft = new JScrollPane(pn);
@@ -184,26 +184,26 @@ public class MemoDialog extends JDialog implements ActionListener {
 				pnDayView.add(pnRight);
 				pnRight.setLayout(new BorderLayout(0, 0));
 				{
-					pnButtons = new JPanel();
+					pnButtons = new JPanel(); 
 					pnRight.add(pnButtons, BorderLayout.NORTH);
 					pnButtons.setLayout(new GridLayout(0, 4, 0, 0)); //4칸 grid Layout으로
 					{
-						btnAdd = new JButton("Add");
+						btnAdd = new JButton("일정추가");
 						btnAdd.addActionListener(this);
 						pnButtons.add(btnAdd);
 					}
 					{
-						btnEdit = new JButton("Edit");
+						btnEdit = new JButton("일정편집");
 						btnEdit.addActionListener(this);
 						pnButtons.add(btnEdit);
 					}
 					{
-						btnDelete = new JButton("Delete");
+						btnDelete = new JButton("일정삭제");
 						btnDelete.addActionListener(this);
 						pnButtons.add(btnDelete);
 					}
 					{
-						btnComplete = new JButton("complete");
+						btnComplete = new JButton("일정수행");
 						btnComplete.addActionListener(this);
 						pnButtons.add(btnComplete);
 					}
@@ -463,12 +463,32 @@ public class MemoDialog extends JDialog implements ActionListener {
 		else if (e.getSource() == btnComplete) {
 			
 			
+<<<<<<< HEAD
+			index = list.getSelectedIndex();
+			if (index == -1) {
+				JOptionPane.showMessageDialog(null, "Please select event", "Not Selected", JOptionPane.ERROR_MESSAGE);
+				setVisible(true);
+			} 
+			else {
+				dlgAdd = new AddDialog((MemoDialog)this, flag);
+				dlgAdd.setVisible(true);
+				readTodo();
+				//dispose();
+				//dispose();
+			}
+			
+		}
+		
+		
+	}
+=======
 				dispose();
 		
 			}	
 		}
 		
 	
+>>>>>>> e0f24bd2e3f25680311d089fb886fcd2876435ca
 	public int getIndex() {
 		return index;
 	}

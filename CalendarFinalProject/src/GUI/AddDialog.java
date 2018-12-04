@@ -96,7 +96,7 @@ public class AddDialog extends JDialog {
 
 			} else {
 				JLabel lblEventNamePlaceholder = new JLabel("Enter event name");
-				lblEventNamePlaceholder.setForeground(Color.GRAY);
+				lblEventNamePlaceholder.setForeground(Color.BLACK);
 				txtEventName.setLayout(new FlowLayout());
 				txtEventName.add(lblEventNamePlaceholder);
 				txtEventName.addKeyListener(new KeyAdapter() {
