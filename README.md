@@ -16,10 +16,12 @@ Memo Calendar
    * '<'  : 지난달 날짜로 보여줌
    * '>'  : 다음달 날짜로 보여줌
 
-# Add/Edit to-do list
+# Add/Edit/Delete/Complete Button
 
-* event 창에 일정을 입력하고 From(시작시간), To(끝나는시간)을 입력하여 일정을 추가한다
-
+* 일정추가 - event 창에 일정을 입력하고 From(시작시간), To(끝나는시간)을 입력하여 일정을 추가한다
+* 일정편집 - 추가된 일정을 편집한다
+* 일정삭제 - 선택된 일정을 삭제합니다
+* 일정수행 - 완료하고 창을 닫습니다.
 # Day View Frame
 
 
