@@ -3,7 +3,6 @@ H_LogOn
  
 Memo Calendar
 ------------- 
-# Main Window
 
 
 ## Main Window Function
