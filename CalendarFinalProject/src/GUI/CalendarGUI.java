@@ -17,7 +17,7 @@ import toDo.ToDo;
  */
 public class CalendarGUI extends DateManager {
 	JFrame mainFrame;
-	private ImageIcon icon = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("icon.png")));
+	private ImageIcon icon = new ImageIcon(Toolkit.getDefaultToolkit().getImage(getClass().getResource("edit.png")));
 	private JPanel pnCalOption;
 	private JButton btnToday;
 	private JLabel lblToday;
@@ -35,7 +35,7 @@ public class CalendarGUI extends DateManager {
 	private JLabel Clock;
 
 	final String WEEK_DAY_NAME[] = { "SUN", "MON", "TUE", "WED", "THR", "FRI", "SAT" };
-	final String title = "Calender";
+	final String title = "H조-메모달력";
 	private JPanel pnTop;
 	private JPanel pnBottom;
 
@@ -80,7 +80,7 @@ public class CalendarGUI extends DateManager {
 		pnTop.add(btnToday, gbc_btnToday);
 		btnToday.setToolTipText("Today");
 		btnToday.addActionListener(lForCalOpButtons);
-		lblToday = new JLabel(today.get(Calendar.MONTH) + 1 + "/" + today.get(Calendar.DAY_OF_MONTH) + "/"
+		lblToday = new JLabel(today.get(Calendar.MONTH) + 1 + "월" + today.get(Calendar.DAY_OF_MONTH) + "일"
 				+ today.get(Calendar.YEAR));
 		GridBagConstraints gbc_lblToday = new GridBagConstraints();
 		gbc_lblToday.fill = GridBagConstraints.VERTICAL;
@@ -156,13 +156,13 @@ public class CalendarGUI extends DateManager {
 			weekDaysName[i].setBorderPainted(false);
 			weekDaysName[i].setContentAreaFilled(false);
 			weekDaysName[i].setEnabled(false);
-			weekDaysName[i].setForeground(Color.WHITE);
+			weekDaysName[i].setForeground(Color.GREEN);
 			if (i == 0)
-				weekDaysName[i].setBackground(new Color(232, 186, 171));
+				weekDaysName[i].setBackground(new Color(255, 248, 220));
 			else if (i == 6)
-				weekDaysName[i].setBackground(new Color(167, 200, 229));
+				weekDaysName[i].setBackground(new Color(255, 248, 220));
 			else
-				weekDaysName[i].setBackground(new Color(206, 199, 194));
+				weekDaysName[i].setBackground(new Color(250, 240, 230));
 			weekDaysName[i].setOpaque(true);
 			weekDaysName[i].setFocusPainted(false);
 			pnCal.add(weekDaysName[i]);
@@ -174,7 +174,7 @@ public class CalendarGUI extends DateManager {
 				
 				dateButs[i][j].setBorderPainted(true);
 				dateButs[i][j].setContentAreaFilled(false);
-				dateButs[i][j].setBackground(Color.WHITE);
+				dateButs[i][j].setBackground(Color.GREEN);
 				dateButs[i][j].setOpaque(false);
 				dateButs[i][j].addActionListener(lForDateButs);
 				JLabel test = new JLabel("test");
